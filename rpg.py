@@ -46,7 +46,9 @@ def remover_area():
                 if len(tarefas) > 0: ## Ajeitar loop que fica fora do index 
                     if len(tarefas_removidas) > len(tarefas):
                         for i in range(0, len(tarefas_removidas)):
-                            if tarefas[i]["ID"] >= tarefas_removidas[i]["ID"]:
+                            id_tarefas = []
+                            id_tarefas.append(tarefas_removidas[i]["ID"])
+                            if tarefas[i]["ID"] >= id_tarefas[i]:
                                 tarefas[i]["ID"] -= 1
                          
         if tarefas_ex == "N":
